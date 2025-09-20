@@ -86,7 +86,7 @@ const App = () => {
           "transition-opacity duration-500 ease-in-out",
           fade ? "opacity-100" : "opacity-0"
         )}
-        style={{ backgroundImage: `url(/bgImage/${bgImage[num]})` }}
+        style={{ backgroundImage: `url(bgImage/${bgImage[num]})` }}
       >
         <div
           className={clsx(
@@ -466,7 +466,7 @@ const App = () => {
                 "cursor-pointer",
                 num === index ? "border-white" : "border-none"
               )}
-              style={{ backgroundImage: `url(/bgImage/${bgI})` }}
+              style={{ backgroundImage: `url(bgImage/${bgI})` }}
               onClick={() => handleBgChange(index)}
             ></div>
           ))}
