@@ -48,7 +48,7 @@ const App = () => {
     "placeholder:text-green-900",
     "placeholder:text-fuchsia-950",
   ];
-  const bgImage = [Desert, Winter, Forest, Sunny, City];
+  const bgImage = [Desert, Winter, Sunny, Forest, City];
 
   const clearInputs = () => {
     setName("");
