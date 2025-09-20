@@ -1,6 +1,11 @@
 import clsx from "clsx";
 import { useState } from "react";
 import "boxicons/css/boxicons.min.css";
+import Sunny from "./bgImage/SunnyArt.jpg";
+import Desert from "./bgImage/DesertArt.jpg";
+import Forest from "./bgImage/ForestArt.jpg";
+import Winter from "./bgImage/WinterArt.jpg";
+import City from "./bgImage/CityArt.jpg";
 
 const App = () => {
   const [num, setNum] = useState(0);
@@ -43,13 +48,7 @@ const App = () => {
     "placeholder:text-green-900",
     "placeholder:text-fuchsia-950",
   ];
-  const bgImage = [
-    "DesertArt.jpg",
-    "WinterArt.jpg",
-    "SunnyArt.jpg",
-    "ForestArt.jpg",
-    "CityArt.jpg",
-  ];
+  const bgImage = [Desert, Winter, Forest, Sunny, City];
 
   const clearInputs = () => {
     setName("");
@@ -64,19 +63,15 @@ const App = () => {
   const [fade, setFade] = useState(true);
 
   const handleBgChange = (index: number) => {
-    setFade(false); 
+    setFade(false);
     setTimeout(() => {
-      setNum(index); 
-      setFade(true); 
-    }, 500); 
+      setNum(index);
+      setFade(true);
+    }, 500);
   };
 
   return (
-    <div className={clsx(
-      "flex",
-      "w-full h-auto",
-      "bg-black"
-    )}>
+    <div className={clsx("flex", "w-full h-auto", "bg-black")}>
       <div
         className={clsx(
           "relative",
@@ -325,7 +320,9 @@ const App = () => {
                       autoComplete="off"
                       placeholder="Contact"
                       onChange={(e) =>
-                        setRegisterContact(e.target.value.replace(/[^0-9]/g, ""))
+                        setRegisterContact(
+                          e.target.value.replace(/[^0-9]/g, "")
+                        )
                       }
                       required
                     />
