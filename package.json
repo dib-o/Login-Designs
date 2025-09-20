@@ -5,7 +5,7 @@
   "type": "module",
   "homepage": "https://github.com/dib-o/Login-Designs/",
   "scripts": {
-    "upload": "gh-pages -d build", 
+    "upload": "gh-pages -d dist", 
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
